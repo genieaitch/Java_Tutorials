@@ -44,46 +44,58 @@ public class MapEx {
         //HashMap 생성
         Map<String, Integer> map = new HashMap<String, Integer>();
 
-        //사과 1000 바나나 2000 포도 3000 추가
+        //1. 사과 1000 바나나 2000 포도 3000 추가
         map.put("사과", 1000);
         map.put("바나나", 2000);
         map.put("포도", 3000);
 
-        //사과가 얼마인지 System 출력문 이용해서 확인
-        System.out.println("사과 가격 : " + map.get("사과"));
+        //2. 사과가 얼마인지 System 출력문 이용해서 확인
+        System.out.println("사과 가격 : " + map.get("사과") + "원");
 
-        //물가가 올랐습니다. 사과를 1500으로 변경
+        //3. 물가가 올랐습니다. 사과를 1500으로 변경
         map.put("사과", 1500);
-        System.out.println("물가 적용된 사과 가격 : " + map.get("사과"));
+        System.out.println("물가 적용된 사과 가격 : " + map.get("사과") + "원");
 
-        //바나나를 판매합니까? System 출력문을 이용해서 확인 Yes or No
+        //4. 바나나를 판매합니까? System 출력문을 이용해서 확인 Yes or No
+
+        //방법 1
+        boolean hasBanana = map.containsKey("바나나");
+        System.out.println("바나나 판매 중인가요? : " + hasBanana);
+        //방법2
+        String hasBanana2 = (map.containsKey("바나나")) ? "YES": "NO";
+        //방법3
         if (map.containsKey("바나나")) {
             System.out.println("바나나 판매 여부 : Yes");
         } else {
             System.out.println("바나나 판매 여부 : No");
         }
 
-        //3000원 짜리 과일이 존재합니까? System 출력문 이용해서 확인 Yes or NO
+        //5. 3000원 짜리 과일이 존재합니까? System 출력문 이용해서 확인 Yes or NO
+        //방법1
+        String has3000Value = map.containsValue((3000)) ? "YES" : "NO";
+        System.out.println("3000원 짜리 과일이 존재합니까? : " + has3000Value);
+
+        //방법2
         if (map.containsValue(3000)) {
             System.out.println("3000원 짜리 과일 존재 여부 : Yes");
         } else {
             System.out.println("3000원 짜리 과일 존재 여부 : No");
         }
 
-        //바나나 품절됐습니다. 바나나 데이터 삭제
+        //6. 바나나 품절됐습니다. 바나나 데이터 삭제
         map.remove("바나나");
-        System.out.println("바나나가 품절 됐습니다.");
+        System.out.println("바나나가 품절 되었습니다.");
 
-        //과일의 개수는? System 출력문을 이용해 확인
-        System.out.println("현재 과일의 개수 : " + map.size());
+        //7. 과일의 개수는? System 출력문을 이용해 확인
+        System.out.println("현재 과일의 개수 : " + map.size() + "개");
 
-        //모든 키 출력
-        System.out.println("모든 과일 : "+ map.keySet());
+        //8. 모든 키 출력
+        System.out.println("모든 키 확인 : " + map.keySet());
 
-        //모든 값 출력
-        System.out.println("모든 가격 : " + map.values());
+        //9. 모든 값 출력
+        System.out.println("모든 값 확인 : " + map.values());
 
-        //모든 키와 값 출력
+        //10. 모든 키와 값 출력
         System.out.println("모든 키와 값 : " + map.entrySet());
-        }
     }
+}
