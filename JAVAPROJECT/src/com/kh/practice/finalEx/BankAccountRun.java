@@ -11,16 +11,16 @@ public class BankAccountRun {
             System.out.println("2. 출금");
             int num = sc.nextInt();
 
-
+/*
             switch (num) {
                 case 1:
                     System.out.print("입금할 금액을 입력해 주세요 : ");
                     int money = sc.nextInt();
-                    account.balance(money);
+                    //account.balance(money);
                     break;
                 case 2:
                     System.out.print("출금할 금액을 입력해 주세요 : ");
-                    if (account.getBalance() < ) {
+                    if (account.getBalance() < balance) {
                         int money2 = sc.nextInt();
                         account -= money2;
                     } else {
@@ -29,11 +29,6 @@ public class BankAccountRun {
                     break;
                 default:
                     System.out.println("잘못 입력하셨습니다.");
-                    break;
+                    break;*/
             }
         }
-    }
-
-
-    }
-}
