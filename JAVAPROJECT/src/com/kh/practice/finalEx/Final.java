@@ -110,7 +110,7 @@ public class Final {
         }
 
 
-}
+
 
     public void method7() {
         Scanner scanner = new Scanner(System.in);
@@ -130,3 +130,4 @@ public class Final {
         }
         System.out.println("나머지 : " +(num1 % num2));
     }
+}

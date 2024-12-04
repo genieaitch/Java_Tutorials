@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class FinalRun {
     public static void main(String[] args) {
-                Final f = new Final();
+        Final f = new Final();
         System.out.println("===홀수더하기 기능===");
         f.oddSUm();
         System.out.println("===첫 번째 글자가 A로 시작하는 단어 찾기===");
