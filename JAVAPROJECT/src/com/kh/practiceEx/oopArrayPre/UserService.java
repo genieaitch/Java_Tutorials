@@ -25,6 +25,7 @@ public class UserService {
 //        int inputAge = 10;
         System.out.print("나이를 입력해주세요(1세 ~ 99세 작성가능 : ");
         int inputAge = sc.nextInt();
+        sc.nextLine();
         try {
             if (inputAge > 0 && inputAge < 100) {
                 u.setAge(inputAge);
@@ -69,4 +70,45 @@ public class UserService {
         }
     }
 
+    //매개변수 생성자 통해서 저장 이메일은 필수가 아님
+    //매개변수 생성자 → 이름/ 나이만 필수로 받도록 수정
+    //이메일을 입력하시겠습니까? yes/ no 대소문자로 구분없이 입력 받기
+    //yes했다면 setEmail을 통해 입력받은 이메일값 저장
+    public void paramNameEmail() {
+        Scanner sc = new Scanner(System.in);
+        User u = new User();
+
+        System.out.print("이름을 입력해 주세요 : ");
+        String inputName = sc.nextLine();
+        System.out.println("[ " + inputName + " ] 이름이 저장되었습니다.");
+
+        System.out.print("나이를 입력해 주세요 : ");
+        int inputAge = sc.nextInt();
+        sc.nextLine();
+        System.out.println("[ " + inputAge + " ] 나이가 저장되었습니다.");
+
+        System.out.print("이메일을 입력하시겠습니까?(yes or no) :");
+        String aEmail = sc.nextLine();
+        if (aEmail.equalsIgnoreCase("yes")) {
+            System.out.print("이메일을 입력해주세요 : ");
+            String inputEmail = sc.nextLine();
+
+            if (inputEmail != null) {
+                System.out.println("[ " + inputEmail + " ] 이메일이 저장되었습니다.");
+            } else {
+                System.out.println("값을 입력하지 않았습니다.");
+            }
+
+            } else if(aEmail.equalsIgnoreCase("no")) {
+            System.out.println("이메일 입력을 하지 않습니다 아래 결과를 확인해 주세요.");
+        } else{
+            System.out.println("잘못입력하셨습니다.");
+        }
+        System.out.println("===입력된 정보===");
+        ArrayList<User> users = new ArrayList<>();
+        users.add(u);
+        for (User user : users){
+            System.out.println(user);
+        }
+    }
 }
