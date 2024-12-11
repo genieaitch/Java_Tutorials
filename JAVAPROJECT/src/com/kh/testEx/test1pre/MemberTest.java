@@ -1,14 +1,14 @@
 package com.kh.testEx.test1pre;
 
-public class Member {
+public class MemberTest {
     private String id;
     private String name;
     private String password;
 
-    public Member() {
+    public MemberTest() {
     }
 
-    public Member(String id, String name, String password) {
+    public MemberTest(String id, String name, String password) {
         this.id = id;
         this.name = name;
         this.password = password;
@@ -38,12 +38,8 @@ public class Member {
         return password;
     }
 
-    @Override
-    public String toString() {
-        return "login{" +"id='" + id +", name='" + name +", password='" + password +'}';
+    public boolean login(String id, String password){
+        return this.id.equals(id) && this.password.equals(password);
     }
 
-    public boolean login(String name, String password) {
-        return this.name.equals(name) && this.password.equals(password);
-    }
 }
