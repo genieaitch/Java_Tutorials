@@ -39,7 +39,7 @@ public class ArrayEx {
     
     - 변수 사용 시 저장된 주소로 찾아가서 그곳에 위치한 배열, 객체 참조
     ** 기본 자료형 8개를 제외한 나머지 자료형은 모두 참조형 변수
-       기본 자료형 : byte short int long boolean float long double char 
+       기본 자료형 : byte short int long boolean float double char
     */
 
     public void method1() {
